@@ -1,0 +1,152 @@
+
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Phone, Mail } from "lucide-react";
+
+const CTA = () => {
+  return (
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-black to-slate-900 relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(255,193,7,0.1),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,165,0,0.1),transparent_50%)]"></div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Main CTA Section */}
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+            Ready to Dominate Your 
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
+              {" "}Industry Online?
+            </span>
+          </h2>
+          <p className="text-xl text-slate-300 max-w-4xl mx-auto mb-8">
+            Limited Time Offer - Get Your Professional Website + FREE SEO Audit + 6 Months Support
+          </p>
+        </div>
+
+        {/* Offer Cards */}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 text-center border border-yellow-400/20 hover:border-yellow-400/40 transition-all duration-300 hover:scale-105">
+            <div className="text-4xl mb-4">💡</div>
+            <h3 className="text-xl font-bold text-white mb-3">Free Strategy Session</h3>
+            <p className="text-slate-300">Discover how to 3x your online leads</p>
+          </div>
+          
+          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 text-center border border-yellow-400/20 hover:border-yellow-400/40 transition-all duration-300 hover:scale-105">
+            <div className="text-4xl mb-4">📊</div>
+            <h3 className="text-xl font-bold text-white mb-3">Competitor Analysis</h3>
+            <p className="text-slate-300">See what your competition is missing</p>
+          </div>
+          
+          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 text-center border border-yellow-400/20 hover:border-yellow-400/40 transition-all duration-300 hover:scale-105">
+            <div className="text-4xl mb-4">🎨</div>
+            <h3 className="text-xl font-bold text-white mb-3">Custom Design Mockup</h3>
+            <p className="text-slate-300">Visualize your new website</p>
+          </div>
+        </div>
+
+        {/* Urgency Banner */}
+        <div className="bg-gradient-to-r from-red-600 to-red-700 rounded-2xl p-6 mb-12 text-center">
+          <div className="text-white">
+            <div className="text-2xl font-bold mb-2">⏰ Only 3 Spots Available This Month</div>
+            <div className="text-red-100">Don't wait - Your competitors are already online</div>
+          </div>
+        </div>
+
+        {/* Contact Options */}
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Left - Contact Info */}
+          <div className="space-y-8">
+            <h3 className="text-3xl font-bold text-white mb-6">Get Started Today</h3>
+            
+            <div className="space-y-6">
+              <div className="flex items-center space-x-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
+                  <Phone className="w-6 h-6 text-black" />
+                </div>
+                <div>
+                  <div className="text-white font-semibold">Call Now</div>
+                  <div className="text-yellow-400 text-lg">+91-XXXX-XXXXX</div>
+                </div>
+              </div>
+              
+              <div className="flex items-center space-x-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
+                  <Mail className="w-6 h-6 text-black" />
+                </div>
+                <div>
+                  <div className="text-white font-semibold">Email Us</div>
+                  <div className="text-yellow-400 text-lg">info@shrineinfotech.com</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-slate-300">
+              <div className="font-semibold text-white mb-2">Address:</div>
+              <p>Shrine InfoTech Solutions<br />Hyderabad, Telangana, India</p>
+            </div>
+
+            {/* Trust Badges */}
+            <div className="flex items-center space-x-8 pt-8 border-t border-slate-700">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-yellow-400">🏆</div>
+                <div className="text-xs text-slate-400 mt-1">5-Star Rated</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-yellow-400">🚀</div>
+                <div className="text-xs text-slate-400 mt-1">Trusted by 100+</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-yellow-400">🛡️</div>
+                <div className="text-xs text-slate-400 mt-1">6-Month Warranty</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right - CTA Form */}
+          <div className="bg-white rounded-3xl p-8 shadow-2xl">
+            <h4 className="text-2xl font-bold text-slate-900 mb-6 text-center">
+              Get Your FREE Website Consultation
+            </h4>
+            
+            <div className="space-y-4">
+              <input 
+                type="text" 
+                placeholder="Your Name"
+                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+              />
+              <input 
+                type="email" 
+                placeholder="Email Address"
+                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+              />
+              <input 
+                type="tel" 
+                placeholder="Phone Number"
+                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+              />
+              <textarea 
+                placeholder="Tell us about your project"
+                rows={4}
+                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+              />
+              
+              <Button 
+                size="lg"
+                className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-semibold py-4 text-lg transition-all duration-300 hover:scale-105"
+              >
+                Get My FREE Consultation
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </div>
+            
+            <p className="text-sm text-slate-500 text-center mt-4">
+              No obligations. No sales pressure. Just actionable insights to grow your business online.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default CTA;
