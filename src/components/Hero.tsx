@@ -14,30 +14,30 @@ const Hero = () => {
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">
-                Transform Your 
+                ERP Solutions 
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
-                  {" "}Business
+                  {" "}That Transform
                 </span>
                 <br />
-                Into a Digital 
+                Your Business
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
-                  {" "}Powerhouse
+                  {" "}Operations
                 </span>
               </h1>
               
               <p className="text-xl text-slate-300 leading-relaxed max-w-2xl">
-                Professional Web Development Services in Hyderabad That Actually Drive Results. 
-                Stop losing customers to competitors with outdated websites.
+                In the digital age, having a robust ERP system is not just an advantage; it's a necessity. 
+                SAP solutions are the cornerstones of modern business strategy.
               </p>
             </div>
 
             {/* Key Benefits */}
             <div className="grid md:grid-cols-2 gap-4">
               {[
-                "3x More Leads Generated",
-                "Lightning Fast Loading",
-                "Mobile-First Design",
-                "SEO-Optimized",
+                "200+ ERP Implementations",
+                "SAP Certified Consultants",
+                "24/7 Support Available",
+                "Industry Best Practices",
               ].map((benefit, index) => (
                 <div key={index} className="flex items-center space-x-3">
                   <div className="flex-shrink-0 w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center">
@@ -54,7 +54,7 @@ const Hero = () => {
                 size="lg" 
                 className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105"
               >
-                Get FREE Consultation
+                Get FREE ERP Assessment
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               
@@ -63,23 +63,23 @@ const Hero = () => {
                 size="lg"
                 className="border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black px-8 py-4 text-lg transition-all duration-300"
               >
-                View Our Work
+                View SAP Solutions
               </Button>
             </div>
 
             {/* Trust Indicators */}
             <div className="flex items-center space-x-8 pt-8 border-t border-slate-700">
               <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400">150+</div>
-                <div className="text-sm text-slate-400">Projects Delivered</div>
+                <div className="text-3xl font-bold text-yellow-400">200+</div>
+                <div className="text-sm text-slate-400">ERP Projects</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400">5★</div>
-                <div className="text-sm text-slate-400">Client Rating</div>
+                <div className="text-3xl font-bold text-yellow-400">15+</div>
+                <div className="text-sm text-slate-400">Years Experience</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400">48h</div>
-                <div className="text-sm text-slate-400">Response Time</div>
+                <div className="text-3xl font-bold text-yellow-400">24/7</div>
+                <div className="text-sm text-slate-400">Support Available</div>
               </div>
             </div>
           </div>

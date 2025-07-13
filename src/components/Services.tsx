@@ -5,27 +5,27 @@ const Services = () => {
   const services = [
     {
       icon: "🚀",
-      title: "Custom Website Development",
-      description: "Transform your vision into a stunning digital reality. No templates, no shortcuts - just premium websites built specifically for your business goals.",
-      features: ["Custom Design", "Premium Quality", "Business-Focused", "Unique Solutions"]
+      title: "SAP BTP Implementation",
+      description: "Transform your business with SAP Business Technology Platform. Cloud-native solutions that integrate, extend, and innovate your enterprise systems.",
+      features: ["Cloud Integration", "Custom Extensions", "Analytics Platform", "Mobile Solutions"]
     },
     {
-      icon: "🛒",
-      title: "E-Commerce Solutions",
-      description: "Start selling online with confidence. Our e-commerce platforms are designed to convert browsers into buyers with seamless checkout experiences.",
-      features: ["Secure Payments", "Inventory Management", "Mobile Commerce", "Analytics Dashboard"]
+      icon: "🎨",
+      title: "SAP Fiori Development",
+      description: "Create intuitive, responsive user experiences with SAP Fiori. Modern UX/UI design that enhances user productivity and satisfaction.",
+      features: ["UX/UI Design", "Mobile Apps", "Custom Tiles", "Role-Based Access"]
     },
     {
-      icon: "📱",
-      title: "Responsive Design",
-      description: "Your website looks perfect on every device. Mobile, tablet, desktop - we ensure flawless user experience across all platforms.",
-      features: ["Mobile-First", "Cross-Browser", "Fast Loading", "Touch Optimized"]
+      icon: "💡",
+      title: "SAP Fiori Consulting",
+      description: "Expert guidance on SAP Fiori strategy, implementation, and best practices. Maximize ROI with our proven consulting methodology.",
+      features: ["Strategy Planning", "Best Practices", "Training Programs", "Ongoing Support"]
     },
     {
-      icon: "🎯",
-      title: "SEO-Optimized Development",
-      description: "Get discovered by your ideal customers. Every website we build follows Google's best practices to rank higher in search results.",
-      features: ["On-Page SEO", "Technical SEO", "Speed Optimization", "Schema Markup"]
+      icon: "⚡",
+      title: "SAP S/4HANA Migration",
+      description: "Seamless migration to SAP S/4HANA with minimal business disruption. Future-proof your business with intelligent ERP solutions.",
+      features: ["Migration Planning", "Data Migration", "System Testing", "Go-Live Support"]
     }
   ];
 
@@ -34,13 +34,13 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-            Our Web Development Services 
+            Our ERP Solutions 
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-orange-600">
-              {" "}That Deliver ROI
+              {" "}That Drive Growth
             </span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Professional services designed to transform your business and drive measurable results
+            From SAP implementation to Fiori development, we deliver enterprise solutions that transform your business operations
           </p>
         </div>
 
