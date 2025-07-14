@@ -28,9 +28,12 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="text-2xl font-bold text-primary">
-              SHRINE
-              <span className="text-accent text-sm ml-1">InfoTech Solutions</span>
+            <Link to="/" className="flex items-center">
+              <img 
+                src="/lovable-uploads/97bff0e4-ae44-4b0f-a017-ec66fea88a10.png" 
+                alt="SHRINE InfoTech Solutions" 
+                className="h-10 w-auto"
+              />
             </Link>
           </div>
 
