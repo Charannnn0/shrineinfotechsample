@@ -1,17 +1,18 @@
 import { useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const erpServices = [
-    "SAP BTP Implementation",
-    "SAP Fiori Development", 
-    "SAP Fiori Consulting",
-    "SAP S/4HANA Migration",
-    "SAP Integration Services"
+    { name: "SAP BTP Implementation", path: "/sap-btp-implementation" },
+    { name: "SAP Fiori Development", path: "/sap-fiori-development" }, 
+    { name: "SAP Fiori Consulting", path: "/sap-fiori-consulting" },
+    { name: "SAP S/4HANA Migration", path: "/sap-s4hana-migration" },
+    { name: "SAP Integration Services", path: "/sap-integration-services" }
   ];
 
   const otherServices = [
@@ -27,17 +28,17 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="text-2xl font-bold text-primary">
+            <Link to="/" className="text-2xl font-bold text-primary">
               SHRINE
               <span className="text-accent text-sm ml-1">InfoTech Solutions</span>
-            </div>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            <a href="#" className="text-foreground hover:text-primary transition-colors">
+            <Link to="/" className="text-foreground hover:text-primary transition-colors">
               Home
-            </a>
+            </Link>
             <a href="#about" className="text-foreground hover:text-primary transition-colors">
               About Us
             </a>
@@ -55,13 +56,13 @@ const Header = () => {
               {activeDropdown === 'erp' && (
                 <div className="absolute top-full left-0 mt-2 w-64 bg-background border border-border rounded-lg shadow-lg p-4 z-50">
                   {erpServices.map((service) => (
-                    <a
-                      key={service}
-                      href="#services"
+                    <Link
+                      key={service.name}
+                      to={service.path}
                       className="block px-4 py-2 text-foreground hover:text-primary hover:bg-accent/10 rounded transition-colors"
                     >
-                      {service}
-                    </a>
+                      {service.name}
+                    </Link>
                   ))}
                 </div>
               )}
@@ -117,16 +118,16 @@ const Header = () => {
         {isMenuOpen && (
           <div className="lg:hidden border-t border-border">
             <div className="py-4 space-y-4">
-              <a href="#" className="block text-foreground hover:text-primary">Home</a>
+              <Link to="/" className="block text-foreground hover:text-primary">Home</Link>
               <a href="#about" className="block text-foreground hover:text-primary">About Us</a>
               
               <div>
                 <div className="font-medium text-foreground mb-2">ERP Solutions</div>
                 <div className="pl-4 space-y-2">
                   {erpServices.map((service) => (
-                    <a key={service} href="#services" className="block text-sm text-muted-foreground hover:text-primary">
-                      {service}
-                    </a>
+                    <Link key={service.name} to={service.path} className="block text-sm text-muted-foreground hover:text-primary">
+                      {service.name}
+                    </Link>
                   ))}
                 </div>
               </div>
