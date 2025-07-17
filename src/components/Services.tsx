@@ -44,35 +44,50 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => (
-            <Card 
-              key={index} 
-              className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-0 bg-white"
-            >
-              <CardHeader className="text-center pb-4">
-                <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {service.icon}
-                </div>
-                <CardTitle className="text-xl font-bold text-slate-900 group-hover:text-yellow-600 transition-colors">
-                  {service.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <CardDescription className="text-slate-600 leading-relaxed">
-                  {service.description}
-                </CardDescription>
-                <div className="space-y-2">
-                  {service.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full"></div>
-                      <span className="text-sm text-slate-700 font-medium">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="relative">
+          {/* Stacking Cards Container */}
+          <div className="flex flex-col lg:flex-row lg:justify-center lg:items-center gap-8 lg:gap-0">
+            {services.map((service, index) => (
+              <Card 
+                key={index} 
+                className={`
+                  group border-0 bg-white shadow-xl transition-all duration-700 ease-out
+                  w-full max-w-sm mx-auto lg:mx-0 lg:w-80
+                  hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 hover:scale-105
+                  ${index > 0 ? 'lg:-ml-20' : ''}
+                  ${index === 0 ? 'lg:z-40' : index === 1 ? 'lg:z-30' : index === 2 ? 'lg:z-20' : 'lg:z-10'}
+                  ${index % 2 === 0 ? 'lg:rotate-2' : 'lg:-rotate-1'}
+                  lg:hover:z-50
+                `}
+                style={{
+                  animationDelay: `${index * 150}ms`,
+                  animationFillMode: 'both'
+                }}
+              >
+                <CardHeader className="text-center pb-4">
+                  <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                    {service.icon}
+                  </div>
+                  <CardTitle className="text-xl font-bold text-slate-900 group-hover:text-yellow-600 transition-colors">
+                    {service.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <CardDescription className="text-slate-600 leading-relaxed">
+                    {service.description}
+                  </CardDescription>
+                  <div className="space-y-2">
+                    {service.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full"></div>
+                        <span className="text-sm text-slate-700 font-medium">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
     </section>
