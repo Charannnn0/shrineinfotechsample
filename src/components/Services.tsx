@@ -44,15 +44,11 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="relative flex flex-col items-center space-y-4 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-0 bg-white w-full max-w-2xl relative"
-              style={{
-                transform: `translateY(-${index * 20}px)`,
-                zIndex: services.length - index,
-              }}
+              className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-0 bg-white"
             >
               <CardHeader className="text-center pb-4">
                 <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
