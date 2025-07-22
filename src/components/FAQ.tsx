@@ -17,7 +17,7 @@ const FAQ = () => {
     },
     {
       question: "What if I'm not satisfied with the result?",
-      answer: "We offer unlimited revisions until you're 100% happy with your website. Your satisfaction is our top priority, and we won't consider the project complete until you're thrilled with the results."
+      answer: "We include up to 3 rounds of revisions in our standard package. If you're still not satisfied, we'll work with you to understand your concerns and find a solution. In rare cases where we can't meet your expectations, we offer a partial refund based on the work completed."
     },
     {
       question: "Do you help with SEO and digital marketing?",
