@@ -81,20 +81,13 @@ const CTA = () => {
             <div className="flex items-center space-x-8 pt-8 border-t border-slate-700">
               <div className="text-center">
                 
-                <div className="text-xs text-slate-400 mt-1">
-              </div>
+                
               </div>
               <div className="text-center">
                 
-                <div className="text-xs text-slate-400 mt-1">
+                
               </div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-yellow-400">
-              </div>
-                <div className="text-xs text-slate-400 mt-1">
-              </div>
-              </div>
+              
             </div>
           </div>
 
