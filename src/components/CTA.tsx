@@ -85,17 +85,14 @@ const CTA = () => {
             {/* Trust Badges */}
             <div className="flex items-center space-x-8 pt-8 border-t border-slate-700">
               <div className="text-center">
-                <div className="text-2xl font-bold text-yellow-400">🏆</div>
-                <div className="text-xs text-slate-400 mt-1">5-Star Rated</div>
+                
+                
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-yellow-400">🚀</div>
-                <div className="text-xs text-slate-400 mt-1">Trusted by 100+</div>
+                
+                
               </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-yellow-400">🛡️</div>
-                <div className="text-xs text-slate-400 mt-1">6-Month Warranty</div>
-              </div>
+              
             </div>
           </div>
 
