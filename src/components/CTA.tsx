@@ -42,7 +42,12 @@ const CTA = () => {
         </div>
 
         {/* Urgency Banner */}
-        
+        <div className="bg-gradient-to-r from-red-600 to-red-700 rounded-2xl p-6 mb-12 text-center">
+          <div className="text-white">
+            <div className="text-2xl font-bold mb-2">⏰ Only 3 Spots Available This Month</div>
+            <div className="text-red-100">Don't wait - Your competitors are already online</div>
+          </div>
+        </div>
 
         {/* Contact Options */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -80,14 +85,17 @@ const CTA = () => {
             {/* Trust Badges */}
             <div className="flex items-center space-x-8 pt-8 border-t border-slate-700">
               <div className="text-center">
-                
-                
+                <div className="text-2xl font-bold text-yellow-400">🏆</div>
+                <div className="text-xs text-slate-400 mt-1">5-Star Rated</div>
               </div>
               <div className="text-center">
-                
-                
+                <div className="text-2xl font-bold text-yellow-400">🚀</div>
+                <div className="text-xs text-slate-400 mt-1">Trusted by 100+</div>
               </div>
-              
+              <div className="text-center">
+                <div className="text-2xl font-bold text-yellow-400">🛡️</div>
+                <div className="text-xs text-slate-400 mt-1">6-Month Warranty</div>
+              </div>
             </div>
           </div>
 
