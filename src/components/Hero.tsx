@@ -1,10 +1,7 @@
-
 import { ArrowRight, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const Hero = () => {
-  return (
-    <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-black overflow-hidden">
+  return <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-black overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,193,7,0.1),transparent_50%)]"></div>
       
@@ -33,34 +30,22 @@ const Hero = () => {
 
             {/* Key Benefits */}
             <div className="grid md:grid-cols-2 gap-4">
-              {[
-                "SAP Certified Consultants",
-                "Industry Best Practices",
-              ].map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-3">
+              {["SAP Certified Consultants", "Industry Best Practices"].map((benefit, index) => <div key={index} className="flex items-center space-x-3">
                   <div className="flex-shrink-0 w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center">
                     <Check className="w-4 h-4 text-black" />
                   </div>
                   <span className="text-slate-200 font-medium">{benefit}</span>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105"
-              >
+              <Button size="lg" className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105">
                 Get FREE ERP Assessment
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black px-8 py-4 text-lg transition-all duration-300"
-              >
+              <Button variant="outline" size="lg" className="border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black px-8 py-4 text-lg transition-all duration-300">
                 View SAP Solutions
               </Button>
             </div>
@@ -68,8 +53,8 @@ const Hero = () => {
             {/* Trust Indicators */}
             <div className="flex items-center space-x-8 pt-8 border-t border-slate-700">
               <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400">15+</div>
-                <div className="text-sm text-slate-400">Years Experience</div>
+                
+                
               </div>
             </div>
           </div>
@@ -109,8 +94,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
