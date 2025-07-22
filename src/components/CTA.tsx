@@ -42,10 +42,12 @@ const CTA = () => {
         </div>
 
         {/* Urgency Banner */}
-        <div className="bg-gradient-to-r from-red-600 to-red-700 rounded-2xl p-6 mb-12 text-center">
+        <div className="bg-gradient-to-r from-red-600 to-red-700 rounded-2xl p-6 mb-12 text-center px-0 py-0">
           <div className="text-white">
-            <div className="text-2xl font-bold mb-2">⏰ Only 3 Spots Available This Month</div>
-            <div className="text-red-100">Don't wait - Your competitors are already online</div>
+            <div className="text-2xl font-bold mb-2">
+          </div>
+            <div className="text-red-100">
+          </div>
           </div>
         </div>
 
