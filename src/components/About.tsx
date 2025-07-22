@@ -2,10 +2,7 @@ import { Building2, Users, Award, Clock } from "lucide-react";
 
 const About = () => {
   const stats = [
-    { icon: Building2, value: "15+", label: "Years Experience" },
-    { icon: Users, value: "150+", label: "Happy Clients" },
-    { icon: Award, value: "50+", label: "Certified Consultants" },
-    { icon: Clock, value: "24/7", label: "Support Available" }
+    { icon: Award, value: "50+", label: "Certified Consultants" }
   ];
 
   return (
