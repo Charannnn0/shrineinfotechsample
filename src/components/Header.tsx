@@ -30,14 +30,10 @@ const Header = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-3">
               <img 
-                src="/lovable-uploads/278ca2d6-2104-4e4b-9bac-15c505b7e8f6.png" 
+                src="/lovable-uploads/2248bfcd-cdba-4b05-8e75-c9d6d0d95728.png" 
                 alt="SHRINE InfoTech Solutions" 
-                className="h-10 w-10 object-contain"
+                className="h-12 object-contain"
               />
-              <div className="flex flex-col">
-                <span className="text-xl font-bold text-primary tracking-tight">SHRINE</span>
-                <span className="text-xs text-muted-foreground tracking-wide">InfoTech Solutions</span>
-              </div>
             </Link>
           </div>
 

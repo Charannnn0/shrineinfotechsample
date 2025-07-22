@@ -34,9 +34,7 @@ const Hero = () => {
             {/* Key Benefits */}
             <div className="grid md:grid-cols-2 gap-4">
               {[
-                "200+ ERP Implementations",
                 "SAP Certified Consultants",
-                "24/7 Support Available",
                 "Industry Best Practices",
               ].map((benefit, index) => (
                 <div key={index} className="flex items-center space-x-3">
@@ -70,16 +68,8 @@ const Hero = () => {
             {/* Trust Indicators */}
             <div className="flex items-center space-x-8 pt-8 border-t border-slate-700">
               <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400">200+</div>
-                <div className="text-sm text-slate-400">ERP Projects</div>
-              </div>
-              <div className="text-center">
                 <div className="text-3xl font-bold text-yellow-400">15+</div>
                 <div className="text-sm text-slate-400">Years Experience</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400">24/7</div>
-                <div className="text-sm text-slate-400">Support Available</div>
               </div>
             </div>
           </div>
@@ -109,7 +99,7 @@ const Hero = () => {
 
               {/* Floating Elements */}
               <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg animate-bounce">
-                <span className="text-black font-bold text-sm">24/7</span>
+                <span className="text-black font-bold text-sm">SAP</span>
               </div>
               
               <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center shadow-lg animate-pulse">
