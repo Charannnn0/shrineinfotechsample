@@ -1,7 +1,10 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, Mail } from "lucide-react";
+
 const CTA = () => {
-  return <section className="py-20 bg-gradient-to-br from-slate-900 via-black to-slate-900 relative overflow-hidden">
+  return (
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-black to-slate-900 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(255,193,7,0.1),transparent_50%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,165,0,0.1),transparent_50%)]"></div>
@@ -42,7 +45,12 @@ const CTA = () => {
         </div>
 
         {/* Urgency Banner */}
-        
+        <div className="bg-gradient-to-r from-red-600 to-red-700 rounded-2xl p-6 mb-12 text-center">
+          <div className="text-white">
+            <div className="text-2xl font-bold mb-2">⏰ Only 3 Spots Available This Month</div>
+            <div className="text-red-100">Don't wait - Your competitors are already online</div>
+          </div>
+        </div>
 
         {/* Contact Options */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -57,7 +65,7 @@ const CTA = () => {
                 </div>
                 <div>
                   <div className="text-white font-semibold">Call Now</div>
-                  <div className="text-yellow-400 text-lg">+91- 9381044375</div>
+                  <div className="text-yellow-400 text-lg">+91-XXXX-XXXXX</div>
                 </div>
               </div>
               
@@ -78,7 +86,20 @@ const CTA = () => {
             </div>
 
             {/* Trust Badges */}
-            
+            <div className="flex items-center space-x-8 pt-8 border-t border-slate-700">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-yellow-400">🏆</div>
+                <div className="text-xs text-slate-400 mt-1">5-Star Rated</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-yellow-400">🚀</div>
+                <div className="text-xs text-slate-400 mt-1">Trusted by 100+</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-yellow-400">🛡️</div>
+                <div className="text-xs text-slate-400 mt-1">6-Month Warranty</div>
+              </div>
+            </div>
           </div>
 
           {/* Right - CTA Form */}
@@ -88,12 +109,31 @@ const CTA = () => {
             </h4>
             
             <div className="space-y-4">
-              <input type="text" placeholder="Your Name" className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent" />
-              <input type="email" placeholder="Email Address" className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent" />
-              <input type="tel" placeholder="Phone Number" className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent" />
-              <textarea placeholder="Tell us about your project" rows={4} className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent" />
+              <input 
+                type="text" 
+                placeholder="Your Name"
+                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+              />
+              <input 
+                type="email" 
+                placeholder="Email Address"
+                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+              />
+              <input 
+                type="tel" 
+                placeholder="Phone Number"
+                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+              />
+              <textarea 
+                placeholder="Tell us about your project"
+                rows={4}
+                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+              />
               
-              <Button size="lg" className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-semibold py-4 text-lg transition-all duration-300 hover:scale-105">
+              <Button 
+                size="lg"
+                className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-semibold py-4 text-lg transition-all duration-300 hover:scale-105"
+              >
                 Get My FREE Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
@@ -105,6 +145,8 @@ const CTA = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default CTA;
