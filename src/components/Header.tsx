@@ -22,6 +22,10 @@ const Header = () => {
     "Software Testing"
   ];
 
+  const toggleDropdown = (dropdown: string) => {
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  };
+
   return (
     <header className="bg-background/10 backdrop-blur-md border-b border-border/20 sticky top-0 z-50">
       <div className="container mx-auto px-4">
@@ -47,22 +51,24 @@ const Header = () => {
             </a>
             
             {/* ERP Solutions Dropdown */}
-            <div 
-              className="relative"
-              onMouseEnter={() => setActiveDropdown('erp')}
-              onMouseLeave={() => setActiveDropdown(null)}
-            >
-              <button className="flex items-center text-foreground hover:text-primary transition-colors">
+            <div className="relative">
+              <button 
+                onClick={() => toggleDropdown('erp')}
+                className="flex items-center text-foreground hover:text-primary transition-colors focus:outline-none focus:text-primary"
+                aria-expanded={activeDropdown === 'erp'}
+                aria-haspopup="true"
+              >
                 ERP Solutions
-                <ChevronDown className="ml-1 h-4 w-4" />
+                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'erp' ? 'rotate-180' : ''}`} />
               </button>
               {activeDropdown === 'erp' && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-background border border-border rounded-lg shadow-lg p-4 z-50">
+                <div className="absolute top-full left-0 mt-2 w-64 bg-card border border-border rounded-lg shadow-xl p-2 z-50 animate-in fade-in-0 zoom-in-95 duration-200">
                   {erpServices.map((service) => (
                     <Link
                       key={service.name}
                       to={service.path}
-                      className="block px-4 py-2 text-foreground hover:text-primary hover:bg-accent/10 rounded transition-colors"
+                      onClick={() => setActiveDropdown(null)}
+                      className="block px-4 py-3 text-card-foreground hover:text-primary hover:bg-accent/20 rounded-md transition-all duration-200 border-b border-border/50 last:border-b-0"
                     >
                       {service.name}
                     </Link>
@@ -72,22 +78,24 @@ const Header = () => {
             </div>
 
             {/* Other Services Dropdown */}
-            <div 
-              className="relative"
-              onMouseEnter={() => setActiveDropdown('other')}
-              onMouseLeave={() => setActiveDropdown(null)}
-            >
-              <button className="flex items-center text-foreground hover:text-primary transition-colors">
+            <div className="relative">
+              <button 
+                onClick={() => toggleDropdown('other')}
+                className="flex items-center text-foreground hover:text-primary transition-colors focus:outline-none focus:text-primary"
+                aria-expanded={activeDropdown === 'other'}
+                aria-haspopup="true"
+              >
                 Other Services
-                <ChevronDown className="ml-1 h-4 w-4" />
+                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'other' ? 'rotate-180' : ''}`} />
               </button>
               {activeDropdown === 'other' && (
-                <div className="absolute top-full left-0 mt-2 w-56 bg-background border border-border rounded-lg shadow-lg p-4 z-50">
+                <div className="absolute top-full left-0 mt-2 w-56 bg-card border border-border rounded-lg shadow-xl p-2 z-50 animate-in fade-in-0 zoom-in-95 duration-200">
                   {otherServices.map((service) => (
                     <a
                       key={service}
                       href="#other-services"
-                      className="block px-4 py-2 text-foreground hover:text-primary hover:bg-accent/10 rounded transition-colors"
+                      onClick={() => setActiveDropdown(null)}
+                      className="block px-4 py-3 text-card-foreground hover:text-primary hover:bg-accent/20 rounded-md transition-all duration-200 border-b border-border/50 last:border-b-0"
                     >
                       {service}
                     </a>
