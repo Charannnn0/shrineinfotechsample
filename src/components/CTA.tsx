@@ -1,10 +1,7 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, Mail } from "lucide-react";
-
 const CTA = () => {
-  return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-black to-slate-900 relative overflow-hidden">
+  return <section className="py-20 bg-gradient-to-br from-slate-900 via-black to-slate-900 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(255,193,7,0.1),transparent_50%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,165,0,0.1),transparent_50%)]"></div>
@@ -65,7 +62,7 @@ const CTA = () => {
                 </div>
                 <div>
                   <div className="text-white font-semibold">Call Now</div>
-                  <div className="text-yellow-400 text-lg">+91-XXXX-XXXXX</div>
+                  <div className="text-yellow-400 text-lg">+91- 93810 44375</div>
                 </div>
               </div>
               
@@ -109,31 +106,12 @@ const CTA = () => {
             </h4>
             
             <div className="space-y-4">
-              <input 
-                type="text" 
-                placeholder="Your Name"
-                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
-              />
-              <input 
-                type="email" 
-                placeholder="Email Address"
-                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
-              />
-              <input 
-                type="tel" 
-                placeholder="Phone Number"
-                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
-              />
-              <textarea 
-                placeholder="Tell us about your project"
-                rows={4}
-                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
-              />
+              <input type="text" placeholder="Your Name" className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent" />
+              <input type="email" placeholder="Email Address" className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent" />
+              <input type="tel" placeholder="Phone Number" className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent" />
+              <textarea placeholder="Tell us about your project" rows={4} className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent" />
               
-              <Button 
-                size="lg"
-                className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-semibold py-4 text-lg transition-all duration-300 hover:scale-105"
-              >
+              <Button size="lg" className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-semibold py-4 text-lg transition-all duration-300 hover:scale-105">
                 Get My FREE Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
@@ -145,8 +123,6 @@ const CTA = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default CTA;
