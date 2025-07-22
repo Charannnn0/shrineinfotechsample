@@ -82,7 +82,7 @@ const CTA = () => {
 
             <div className="text-slate-300">
               <div className="font-semibold text-white mb-2">Address:</div>
-              <p>Shrine InfoTech Solutions<br />Hyderabad, Telangana, India</p>
+              <p>Plot No: 178 & 179, Jahanavi Township,<br />KT Annaram Road, Suryapet, Telangana-508213</p>
             </div>
 
             {/* Trust Badges */}
