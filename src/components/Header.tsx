@@ -32,7 +32,7 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/2248bfcd-cdba-4b05-8e75-c9d6d0d95728.png" 
                 alt="SHRINE InfoTech Solutions" 
-                className="h-12 object-contain"
+                className="h-10 object-contain"
               />
             </Link>
           </div>
