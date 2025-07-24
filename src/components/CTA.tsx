@@ -66,7 +66,7 @@ const CTA = () => {
                 </div>
               </div>
               
-              <div className="flex items-center space-x-4">
+              <div data-email-section className="flex items-center space-x-4">
                 <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
                   <Mail className="w-6 h-6 text-black" />
                 </div>

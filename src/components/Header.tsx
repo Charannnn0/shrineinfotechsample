@@ -104,9 +104,12 @@ const Header = () => {
               )}
             </div>
 
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors">
+            <button 
+              onClick={() => document.querySelector('[data-email-section]')?.scrollIntoView({ behavior: 'smooth' })}
+              className="text-foreground hover:text-primary transition-colors"
+            >
               Contact
-            </a>
+            </button>
           </nav>
 
           {/* Desktop CTA */}
@@ -157,7 +160,12 @@ const Header = () => {
                 </div>
               </div>
 
-              <a href="#contact" className="block text-foreground hover:text-primary">Contact</a>
+              <button 
+                onClick={() => document.querySelector('[data-email-section]')?.scrollIntoView({ behavior: 'smooth' })}
+                className="block text-foreground hover:text-primary w-full text-left"
+              >
+                Contact
+              </button>
               
               <Button 
                 onClick={() => document.getElementById('consultation-form')?.scrollIntoView({ behavior: 'smooth' })}
