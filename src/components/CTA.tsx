@@ -15,9 +15,7 @@ const CTA = () => {
               {" "}Industry Online?
             </span>
           </h2>
-          <p className="text-xl text-slate-300 max-w-4xl mx-auto mb-8">
-            Limited Time Offer - Get Your Professional Website + FREE SEO Audit + 6 Months Support
-          </p>
+          
         </div>
 
         {/* Offer Cards */}
