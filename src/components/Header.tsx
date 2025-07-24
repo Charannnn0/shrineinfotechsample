@@ -111,7 +111,10 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <div className="hidden lg:block">
-            <Button className="bg-accent hover:bg-accent/90 text-white">
+            <Button 
+              onClick={() => document.getElementById('consultation-form')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-accent hover:bg-accent/90 text-white"
+            >
               Get Quote
             </Button>
           </div>
@@ -156,7 +159,10 @@ const Header = () => {
 
               <a href="#contact" className="block text-foreground hover:text-primary">Contact</a>
               
-              <Button className="w-full bg-accent hover:bg-accent/90 text-white">
+              <Button 
+                onClick={() => document.getElementById('consultation-form')?.scrollIntoView({ behavior: 'smooth' })}
+                className="w-full bg-accent hover:bg-accent/90 text-white"
+              >
                 Get Quote
               </Button>
             </div>
