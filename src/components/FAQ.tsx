@@ -70,7 +70,10 @@ const FAQ = () => {
           <p className="text-slate-600 mb-6 text-lg">
             Still have questions? We're here to help!
           </p>
-          <button className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105">
+          <button 
+            onClick={() => document.getElementById('consultation-form')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105"
+          >
             Schedule a Free Consultation
           </button>
         </div>
