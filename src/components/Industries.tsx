@@ -43,41 +43,6 @@ const Industries = () => {
             </div>
           ))}
         </div>
-
-        {/* Trust Indicators */}
-        <div className="mt-16 bg-gradient-to-r from-slate-900 to-black rounded-3xl p-12 text-center">
-          <h3 className="text-3xl font-bold text-white mb-8">
-            Why Hyderabad Businesses Trust Shrine InfoTech
-          </h3>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
-            <div className="space-y-3">
-              <div className="text-3xl">🏆</div>
-              <div className="text-2xl font-bold text-yellow-400">150+</div>
-              <div className="text-slate-300">Successful Projects</div>
-            </div>
-            <div className="space-y-3">
-              <div className="text-3xl">⚡</div>
-              <div className="text-2xl font-bold text-yellow-400">48h</div>
-              <div className="text-slate-300">Response Time</div>
-            </div>
-            <div className="space-y-3">
-              <div className="text-3xl">🔒</div>
-              <div className="text-2xl font-bold text-yellow-400">100%</div>
-              <div className="text-slate-300">Secure Development</div>
-            </div>
-            <div className="space-y-3">
-              <div className="text-3xl">💰</div>
-              <div className="text-2xl font-bold text-yellow-400">0</div>
-              <div className="text-slate-300">Hidden Costs</div>
-            </div>
-            <div className="space-y-3">
-              <div className="text-3xl">🛡️</div>
-              <div className="text-2xl font-bold text-yellow-400">6M</div>
-              <div className="text-slate-300">Warranty</div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
