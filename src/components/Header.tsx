@@ -77,32 +77,10 @@ const Header = () => {
               )}
             </div>
 
-            {/* Other Services Dropdown */}
-            <div className="relative">
-              <button 
-                onClick={() => toggleDropdown('other')}
-                className="flex items-center text-foreground hover:text-primary transition-colors focus:outline-none focus:text-primary"
-                aria-expanded={activeDropdown === 'other'}
-                aria-haspopup="true"
-              >
-                Other Services
-                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'other' ? 'rotate-180' : ''}`} />
-              </button>
-              {activeDropdown === 'other' && (
-                <div className="absolute top-full left-0 mt-2 w-56 bg-card border border-border rounded-lg shadow-xl p-2 z-50 animate-in fade-in-0 zoom-in-95 duration-200">
-                  {otherServices.map((service) => (
-                    <a
-                      key={service}
-                      href="#other-services"
-                      onClick={() => setActiveDropdown(null)}
-                      className="block px-4 py-3 text-card-foreground hover:text-primary hover:bg-accent/20 rounded-md transition-all duration-200 border-b border-border/50 last:border-b-0"
-                    >
-                      {service}
-                    </a>
-                  ))}
-                </div>
-              )}
-            </div>
+            {/* Other Services */}
+            <a href="#other-services" className="text-foreground hover:text-primary transition-colors">
+              Other Services
+            </a>
 
             <button 
               onClick={() => document.querySelector('[data-email-section]')?.scrollIntoView({ behavior: 'smooth' })}
@@ -149,16 +127,7 @@ const Header = () => {
                 </div>
               </div>
 
-              <div>
-                <div className="font-medium text-foreground mb-2">Other Services</div>
-                <div className="pl-4 space-y-2">
-                  {otherServices.map((service) => (
-                    <a key={service} href="#other-services" className="block text-sm text-muted-foreground hover:text-primary">
-                      {service}
-                    </a>
-                  ))}
-                </div>
-              </div>
+              <a href="#other-services" className="block text-foreground hover:text-primary">Other Services</a>
 
               <button 
                 onClick={() => document.querySelector('[data-email-section]')?.scrollIntoView({ behavior: 'smooth' })}
