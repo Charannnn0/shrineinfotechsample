@@ -46,7 +46,17 @@ const About = () => {
             </div>
           </div>
 
-          
+          {/* Image Section */}
+          <div className="order-first lg:order-last">
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+                alt="Java programming on monitor"
+                className="rounded-2xl shadow-2xl w-full h-[500px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>;
