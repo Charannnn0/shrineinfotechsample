@@ -106,9 +106,10 @@ const Process = () => {
           </p>
           <button 
             onClick={() => document.querySelector('[data-email-section]')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105"
+            className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
           >
-            Schedule Free Consultation
+            Submit
+            <ArrowRight className="w-5 h-5" />
           </button>
         </div>
       </div>
