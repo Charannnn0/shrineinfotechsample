@@ -42,7 +42,7 @@ const OtherServices = () => {
               key={service.title}
               className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 text-center"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-600 to-orange-500 rounded-xl mb-4">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-xl mb-4">
                 <service.icon className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-slate-800 mb-3">{service.title}</h3>
