@@ -43,7 +43,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            <Link to="/" className="text-white hover:text-yellow-400 transition-colors">
+            <Link to="/" className="text-foreground hover:text-primary transition-colors">
               Home
             </Link>
             <a href="#about" className="text-foreground hover:text-primary transition-colors">
