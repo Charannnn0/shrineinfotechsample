@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -6,6 +6,16 @@ import { Link } from "react-router-dom";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const erpServices = [
     { name: "SAP BTP Implementation", path: "/sap-btp-implementation" },
@@ -43,10 +53,10 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            <Link to="/" className="text-foreground hover:text-primary transition-colors">
+            <Link to="/" className={`transition-colors ${isScrolled ? 'text-[#FDA22F] hover:text-[#FDA22F]/80' : 'text-foreground hover:text-primary'}`}>
               Home
             </Link>
-            <a href="#about" className="text-foreground hover:text-primary transition-colors">
+            <a href="#about" className={`transition-colors ${isScrolled ? 'text-[#FDA22F] hover:text-[#FDA22F]/80' : 'text-foreground hover:text-primary'}`}>
               About Us
             </a>
             
@@ -54,7 +64,7 @@ const Header = () => {
             <div className="relative">
               <button 
                 onClick={() => toggleDropdown('erp')}
-                className="flex items-center text-foreground hover:text-primary transition-colors focus:outline-none focus:text-primary"
+                className={`flex items-center transition-colors focus:outline-none ${isScrolled ? 'text-[#FDA22F] hover:text-[#FDA22F]/80 focus:text-[#FDA22F]' : 'text-foreground hover:text-primary focus:text-primary'}`}
                 aria-expanded={activeDropdown === 'erp'}
                 aria-haspopup="true"
               >
@@ -78,13 +88,13 @@ const Header = () => {
             </div>
 
             {/* Other Services */}
-            <a href="#other-services" className="text-foreground hover:text-primary transition-colors">
+            <a href="#other-services" className={`transition-colors ${isScrolled ? 'text-[#FDA22F] hover:text-[#FDA22F]/80' : 'text-foreground hover:text-primary'}`}>
               Other Services
             </a>
 
             <button 
               onClick={() => document.querySelector('[data-email-section]')?.scrollIntoView({ behavior: 'smooth' })}
-              className="text-foreground hover:text-primary transition-colors"
+              className={`transition-colors ${isScrolled ? 'text-[#FDA22F] hover:text-[#FDA22F]/80' : 'text-foreground hover:text-primary'}`}
             >
               Contact
             </button>
