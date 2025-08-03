@@ -59,12 +59,12 @@ const Header = () => {
           <nav className="hidden lg:flex items-center space-x-8">
             <Link 
               to="/" 
-              className={`transition-all duration-300 ${isScrolled ? 'text-[#FDA22F] hover:text-[#FDA22F]/80' : 'text-foreground hover:text-primary'}`}
+              className={`transition-all duration-300 ${isScrolled ? 'text-[#FDA22F] hover:text-[#FDA22F]/80 text-sm' : 'text-foreground hover:text-primary'}`}
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             >
               Home
             </Link>
-            <a href="#about" className={`transition-all duration-300 ${isScrolled ? 'text-[#FDA22F] hover:text-[#FDA22F]/80' : 'text-foreground hover:text-primary'}`}>
+            <a href="#about" className={`transition-all duration-300 ${isScrolled ? 'text-[#FDA22F] hover:text-[#FDA22F]/80 text-sm' : 'text-foreground hover:text-primary'}`}>
               About Us
             </a>
             
@@ -72,7 +72,7 @@ const Header = () => {
             <div className="relative">
               <button 
                 onClick={() => toggleDropdown('erp')}
-                className={`flex items-center transition-all duration-300 focus:outline-none ${isScrolled ? 'text-[#FDA22F] hover:text-[#FDA22F]/80 focus:text-[#FDA22F]' : 'text-foreground hover:text-primary focus:text-primary'}`}
+                className={`flex items-center transition-all duration-300 focus:outline-none ${isScrolled ? 'text-[#FDA22F] hover:text-[#FDA22F]/80 focus:text-[#FDA22F] text-sm' : 'text-foreground hover:text-primary focus:text-primary'}`}
                 aria-expanded={activeDropdown === 'erp'}
                 aria-haspopup="true"
               >
@@ -96,13 +96,13 @@ const Header = () => {
             </div>
 
             {/* Other Services */}
-            <a href="#other-services" className={`transition-all duration-300 ${isScrolled ? 'text-[#FDA22F] hover:text-[#FDA22F]/80' : 'text-foreground hover:text-primary'}`}>
+            <a href="#other-services" className={`transition-all duration-300 ${isScrolled ? 'text-[#FDA22F] hover:text-[#FDA22F]/80 text-sm' : 'text-foreground hover:text-primary'}`}>
               Other Services
             </a>
 
             <button 
               onClick={() => document.querySelector('[data-email-section]')?.scrollIntoView({ behavior: 'smooth' })}
-              className={`transition-all duration-300 ${isScrolled ? 'text-[#FDA22F] hover:text-[#FDA22F]/80' : 'text-foreground hover:text-primary'}`}
+              className={`transition-all duration-300 ${isScrolled ? 'text-[#FDA22F] hover:text-[#FDA22F]/80 text-sm' : 'text-foreground hover:text-primary'}`}
             >
               Contact
             </button>
