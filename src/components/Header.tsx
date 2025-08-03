@@ -42,7 +42,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="flex items-center space-x-3">
+            <Link 
+              to="/" 
+              className="flex items-center space-x-3"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            >
               <img 
                 src="/lovable-uploads/2248bfcd-cdba-4b05-8e75-c9d6d0d95728.png" 
                 alt="SHRINE InfoTech Solutions" 
