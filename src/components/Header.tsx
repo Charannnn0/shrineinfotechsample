@@ -53,7 +53,11 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            <Link to="/" className={`transition-colors ${isScrolled ? 'text-[#FDA22F] hover:text-[#FDA22F]/80' : 'text-foreground hover:text-primary'}`}>
+            <Link 
+              to="/" 
+              className={`transition-colors ${isScrolled ? 'text-[#FDA22F] hover:text-[#FDA22F]/80' : 'text-foreground hover:text-primary'}`}
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            >
               Home
             </Link>
             <a href="#about" className={`transition-colors ${isScrolled ? 'text-[#FDA22F] hover:text-[#FDA22F]/80' : 'text-foreground hover:text-primary'}`}>
