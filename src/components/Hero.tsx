@@ -49,7 +49,12 @@ const Hero = () => {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               
-              <Button variant="outline" size="lg" className="border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black px-8 py-4 text-lg transition-all duration-300">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black px-8 py-4 text-lg transition-all duration-300"
+                onClick={() => document.querySelector('.text-center.mb-16.animate-fade-in')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 View SAP Solutions
               </Button>
             </div>
