@@ -48,7 +48,7 @@ const SapS4HanaMigration = () => {
             
             <div className="text-center mt-12">
               <Button 
-                onClick={() => window.location.href = '/#consultation-form'}
+                onClick={() => document.querySelector('[data-email-section]')?.scrollIntoView({ behavior: 'smooth' })}
                 className="bg-accent hover:bg-accent/90 text-white px-8 py-3 text-lg"
               >
                 Schedule Free Consultation
