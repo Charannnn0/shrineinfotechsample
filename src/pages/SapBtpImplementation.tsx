@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import { Button } from "@/components/ui/button";
 
 const SapBtpImplementation = () => {
   return (
@@ -43,6 +44,28 @@ const SapBtpImplementation = () => {
                 <li>24/7 support and monitoring</li>
                 <li>Cost-effective solutions tailored to your budget</li>
               </ul>
+            </div>
+            
+            <div className="bg-accent/10 p-8 rounded-lg border-l-4 border-accent mt-8">
+              <h3 className="text-2xl font-semibold mb-4">Ready to Implement SAP BTP?</h3>
+              <p className="text-muted-foreground mb-6">
+                Accelerate your digital transformation with our comprehensive BTP implementation services.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  onClick={() => window.location.href = '/#consultation-form'}
+                  className="bg-accent hover:bg-accent/90 text-white"
+                >
+                  Get Free Consultation
+                </Button>
+                <Button 
+                  variant="outline" 
+                  onClick={() => window.location.href = 'tel:+919381044375'}
+                  className="border-accent text-accent hover:bg-accent hover:text-white"
+                >
+                  Call Now: +91-93810 44375
+                </Button>
+              </div>
             </div>
           </div>
         </div>
