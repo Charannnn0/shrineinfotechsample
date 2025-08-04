@@ -46,26 +46,13 @@ const SapFioriConsulting = () => {
               </ul>
             </div>
             
-            <div className="bg-accent/10 p-8 rounded-lg border-l-4 border-accent mt-8">
-              <h3 className="text-2xl font-semibold mb-4">Ready for Expert Fiori Consulting?</h3>
-              <p className="text-muted-foreground mb-6">
-                Let our SAP Fiori experts guide your implementation strategy and planning.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  onClick={() => window.location.href = '/#consultation-form'}
-                  className="bg-accent hover:bg-accent/90 text-white"
-                >
-                  Get Free Consultation
-                </Button>
-                <Button 
-                  variant="outline" 
-                  onClick={() => window.location.href = 'tel:+919381044375'}
-                  className="border-accent text-accent hover:bg-accent hover:text-white"
-                >
-                  Call Now: +91-93810 44375
-                </Button>
-              </div>
+            <div className="text-center mt-12">
+              <Button 
+                onClick={() => window.location.href = '/#consultation-form'}
+                className="bg-accent hover:bg-accent/90 text-white px-8 py-3 text-lg"
+              >
+                Schedule Free Consultation
+              </Button>
             </div>
           </div>
         </div>
