@@ -131,25 +131,25 @@ const Header = () => {
         {isMenuOpen && (
           <div className="lg:hidden border-t border-border">
             <div className="py-4 space-y-4">
-              <Link to="/" className="block text-foreground hover:text-primary">Home</Link>
-              <a href="#about" className="block text-foreground hover:text-primary">About Us</a>
+              <Link to="/" className={`block transition-all duration-300 ${isScrolled ? 'text-[#FDA22F] hover:text-[#FDA22F]/80 text-sm' : 'text-foreground hover:text-primary'}`}>Home</Link>
+              <a href="#about" className={`block transition-all duration-300 ${isScrolled ? 'text-[#FDA22F] hover:text-[#FDA22F]/80 text-sm' : 'text-foreground hover:text-primary'}`}>About Us</a>
               
               <div>
-                <div className="font-medium text-foreground mb-2">ERP Solutions</div>
+                <div className={`font-medium mb-2 transition-all duration-300 ${isScrolled ? 'text-[#FDA22F] text-sm' : 'text-foreground'}`}>ERP Solutions</div>
                 <div className="pl-4 space-y-2">
                   {erpServices.map((service) => (
-                    <Link key={service.name} to={service.path} className="block text-sm text-muted-foreground hover:text-primary">
+                    <Link key={service.name} to={service.path} className={`block transition-all duration-300 ${isScrolled ? 'text-[#FDA22F]/80 hover:text-[#FDA22F] text-sm' : 'text-sm text-muted-foreground hover:text-primary'}`}>
                       {service.name}
                     </Link>
                   ))}
                 </div>
               </div>
 
-              <a href="#other-services" className="block text-foreground hover:text-primary">Other Services</a>
+              <a href="#other-services" className={`block transition-all duration-300 ${isScrolled ? 'text-[#FDA22F] hover:text-[#FDA22F]/80 text-sm' : 'text-foreground hover:text-primary'}`}>Other Services</a>
 
               <button 
                 onClick={() => document.querySelector('[data-email-section]')?.scrollIntoView({ behavior: 'smooth' })}
-                className="block text-foreground hover:text-primary w-full text-left"
+                className={`block w-full text-left transition-all duration-300 ${isScrolled ? 'text-[#FDA22F] hover:text-[#FDA22F]/80 text-sm' : 'text-foreground hover:text-primary'}`}
               >
                 Contact
               </button>
