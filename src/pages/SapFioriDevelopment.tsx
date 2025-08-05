@@ -48,7 +48,7 @@ const SapFioriDevelopment = () => {
             
             <div className="text-center mt-12">
               <Button 
-                onClick={() => document.querySelector('[data-email-section]')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => window.location.href = '/#consultation-form'}
                 className="bg-accent hover:bg-accent/90 text-white px-8 py-3 text-lg"
               >
                 Schedule Free Consultation
