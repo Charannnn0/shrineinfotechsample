@@ -48,7 +48,12 @@ const SapFioriDevelopment = () => {
             
             <div className="text-center mt-12">
               <Button 
-                onClick={() => window.location.href = '/#consultation-form'}
+                onClick={() => {
+                  window.location.href = '/';
+                  setTimeout(() => {
+                    document.getElementById('consultation-form')?.scrollIntoView({ behavior: 'smooth' });
+                  }, 100);
+                }}
                 className="bg-accent hover:bg-accent/90 text-white px-8 py-3 text-lg"
               >
                 Schedule Free Consultation
