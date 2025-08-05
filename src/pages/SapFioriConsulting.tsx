@@ -51,10 +51,13 @@ const SapFioriConsulting = () => {
             <div className="text-center mt-12">
               <Button 
                 onClick={() => {
-                  navigate('/');
+                  navigate('/', { replace: true });
                   setTimeout(() => {
-                    document.getElementById('consultation-form')?.scrollIntoView({ behavior: 'smooth' });
-                  }, 100);
+                    const element = document.getElementById('consultation-form');
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                  }, 500);
                 }}
                 className="bg-accent hover:bg-accent/90 text-white px-8 py-3 text-lg"
               >
