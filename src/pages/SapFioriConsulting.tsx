@@ -1,7 +1,9 @@
 import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const SapFioriConsulting = () => {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -49,7 +51,7 @@ const SapFioriConsulting = () => {
             <div className="text-center mt-12">
               <Button 
                 onClick={() => {
-                  window.location.href = '/';
+                  navigate('/');
                   setTimeout(() => {
                     document.getElementById('consultation-form')?.scrollIntoView({ behavior: 'smooth' });
                   }, 100);
