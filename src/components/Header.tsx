@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,6 +36,21 @@ const Header = () => {
 
   const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  };
+
+  const handleSectionNavigation = (sectionId: string) => {
+    if (location.pathname === '/') {
+      // Already on home page, just scroll
+      const element = document.getElementById(sectionId) || document.querySelector(`[data-${sectionId}-section]`);
+      element?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // Navigate to home page first, then scroll
+      navigate('/', { replace: true });
+      setTimeout(() => {
+        const element = document.getElementById(sectionId) || document.querySelector(`[data-${sectionId}-section]`);
+        element?.scrollIntoView({ behavior: 'smooth' });
+      }, 500);
+    }
   };
 
   return (
@@ -64,9 +81,12 @@ const Header = () => {
             >
               Home
             </Link>
-            <a href="#about" className={`transition-all duration-300 ${isScrolled ? 'text-[#FDA22F] hover:text-[#FDA22F]/80 text-sm' : 'text-foreground hover:text-primary'}`}>
+            <button 
+              onClick={() => handleSectionNavigation('about')}
+              className={`transition-all duration-300 ${isScrolled ? 'text-[#FDA22F] hover:text-[#FDA22F]/80 text-sm' : 'text-foreground hover:text-primary'}`}
+            >
               About Us
-            </a>
+            </button>
             
             {/* ERP Solutions Dropdown */}
             <div className="relative">
@@ -96,12 +116,15 @@ const Header = () => {
             </div>
 
             {/* Other Services */}
-            <a href="#other-services" className={`transition-all duration-300 ${isScrolled ? 'text-[#FDA22F] hover:text-[#FDA22F]/80 text-sm' : 'text-foreground hover:text-primary'}`}>
+            <button 
+              onClick={() => handleSectionNavigation('other-services')}
+              className={`transition-all duration-300 ${isScrolled ? 'text-[#FDA22F] hover:text-[#FDA22F]/80 text-sm' : 'text-foreground hover:text-primary'}`}
+            >
               Other Services
-            </a>
+            </button>
 
             <button 
-              onClick={() => document.querySelector('[data-email-section]')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => handleSectionNavigation('email')}
               className={`transition-all duration-300 ${isScrolled ? 'text-[#FDA22F] hover:text-[#FDA22F]/80 text-sm' : 'text-foreground hover:text-primary'}`}
             >
               Contact
@@ -111,7 +134,7 @@ const Header = () => {
           {/* Desktop CTA */}
           <div className="hidden lg:block">
             <Button 
-              onClick={() => document.getElementById('consultation-form')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => handleSectionNavigation('consultation-form')}
               className="bg-accent hover:bg-accent/90 text-white"
             >
               Get Quote
@@ -132,7 +155,12 @@ const Header = () => {
           <div className="lg:hidden border-t border-border">
             <div className="py-4 space-y-4">
               <Link to="/" className={`block transition-all duration-300 ${isScrolled ? 'text-[#FDA22F] hover:text-[#FDA22F]/80 text-sm' : 'text-foreground hover:text-primary'}`}>Home</Link>
-              <a href="#about" className={`block transition-all duration-300 ${isScrolled ? 'text-[#FDA22F] hover:text-[#FDA22F]/80 text-sm' : 'text-foreground hover:text-primary'}`}>About Us</a>
+              <button 
+                onClick={() => handleSectionNavigation('about')}
+                className={`block w-full text-left transition-all duration-300 ${isScrolled ? 'text-[#FDA22F] hover:text-[#FDA22F]/80 text-sm' : 'text-foreground hover:text-primary'}`}
+              >
+                About Us
+              </button>
               
               <div>
                 <div className={`font-medium mb-2 transition-all duration-300 ${isScrolled ? 'text-[#FDA22F] text-sm' : 'text-foreground'}`}>ERP Solutions</div>
@@ -145,17 +173,22 @@ const Header = () => {
                 </div>
               </div>
 
-              <a href="#other-services" className={`block transition-all duration-300 ${isScrolled ? 'text-[#FDA22F] hover:text-[#FDA22F]/80 text-sm' : 'text-foreground hover:text-primary'}`}>Other Services</a>
+              <button 
+                onClick={() => handleSectionNavigation('other-services')}
+                className={`block w-full text-left transition-all duration-300 ${isScrolled ? 'text-[#FDA22F] hover:text-[#FDA22F]/80 text-sm' : 'text-foreground hover:text-primary'}`}
+              >
+                Other Services
+              </button>
 
               <button 
-                onClick={() => document.querySelector('[data-email-section]')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => handleSectionNavigation('email')}
                 className={`block w-full text-left transition-all duration-300 ${isScrolled ? 'text-[#FDA22F] hover:text-[#FDA22F]/80 text-sm' : 'text-foreground hover:text-primary'}`}
               >
                 Contact
               </button>
               
               <Button 
-                onClick={() => document.getElementById('consultation-form')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => handleSectionNavigation('consultation-form')}
                 className="w-full bg-accent hover:bg-accent/90 text-white"
               >
                 Get Quote
