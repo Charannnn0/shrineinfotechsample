@@ -12,19 +12,47 @@ const CTA = () => {
     phone: '',
     project: ''
   });
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Form Submitted Successfully!",
-      description: "Thank you for your submission. We'll get back to you within 24 hours."
-    });
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      project: ''
-    });
+    
+    try {
+      // Send to Zapier webhook
+      await fetch("https://hooks.zapier.com/hooks/catch/23020933/u4x25sv/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        mode: "no-cors",
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          project: formData.project,
+          timestamp: new Date().toISOString(),
+          source: "Business Consultation Form"
+        }),
+      });
+
+      toast({
+        title: "Form Submitted Successfully!",
+        description: "Thank you for your submission. We'll get back to you within 24 hours."
+      });
+
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        project: ''
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast({
+        title: "Submission Error",
+        description: "There was an issue submitting your form. Please try again.",
+        variant: "destructive"
+      });
+    }
   };
   return <section className="py-20 bg-gradient-to-br from-slate-900 via-black to-slate-900 relative overflow-hidden">
       {/* Background Pattern */}
