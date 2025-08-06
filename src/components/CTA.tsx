@@ -155,7 +155,7 @@ const CTA = () => {
               Get Your FREE Business Consultation
             </h4>
             
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form action="https://hook.eu2.make.com/bjn8a5p65ka7qsm9qi1fja8ajdeg7gzu" method="POST" onSubmit={handleSubmit} className="space-y-4">
               <input type="text" placeholder="Your Name" value={formData.name} onChange={e => setFormData({
               ...formData,
               name: e.target.value
