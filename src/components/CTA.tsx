@@ -7,10 +7,10 @@ const CTA = () => {
 
   useEffect(() => {
     const scriptURL = 'https://hook.eu2.make.com/bjn8a5p65ka7qsm9qi1fja8ajdeg7gzu';
-    const form = document.getElementById('contactForm') as HTMLFormElement;
-
+    
     const handleFormSubmit = (e: Event) => {
       e.preventDefault();
+      const form = e.target as HTMLFormElement;
       const data = Object.fromEntries(new FormData(form));
       
       // Add additional data
@@ -45,11 +45,17 @@ const CTA = () => {
       });
     };
 
-    if (form) {
-      form.addEventListener('submit', handleFormSubmit);
-    }
+    // Use a timeout to ensure the DOM is ready
+    const timeout = setTimeout(() => {
+      const form = document.getElementById('contactForm') as HTMLFormElement;
+      if (form) {
+        form.addEventListener('submit', handleFormSubmit);
+      }
+    }, 100);
 
     return () => {
+      clearTimeout(timeout);
+      const form = document.getElementById('contactForm') as HTMLFormElement;
       if (form) {
         form.removeEventListener('submit', handleFormSubmit);
       }
