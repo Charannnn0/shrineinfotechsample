@@ -3,24 +3,29 @@ import { ArrowRight, Phone, Mail } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 const CTA = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     project: ''
   });
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
       title: "Form Submitted Successfully!",
-      description: "Thank you for your submission. We'll get back to you within 24 hours.",
+      description: "Thank you for your submission. We'll get back to you within 24 hours."
     });
     // Reset form
-    setFormData({ name: '', email: '', phone: '', project: '' });
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      project: ''
+    });
   };
-
   return <section className="py-20 bg-gradient-to-br from-slate-900 via-black to-slate-900 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(255,193,7,0.1),transparent_50%)]"></div>
@@ -123,38 +128,22 @@ const CTA = () => {
             </h4>
             
             <form onSubmit={handleSubmit} className="space-y-4">
-              <input 
-                type="text" 
-                placeholder="Your Name" 
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent" 
-                required
-              />
-              <input 
-                type="email" 
-                placeholder="Email Address" 
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent" 
-                required
-              />
-              <input 
-                type="tel" 
-                placeholder="Phone Number" 
-                value={formData.phone}
-                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent" 
-                required
-              />
-              <textarea 
-                placeholder="Tell us about your project" 
-                rows={4} 
-                value={formData.project}
-                onChange={(e) => setFormData({ ...formData, project: e.target.value })}
-                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent" 
-                required
-              />
+              <input type="text" placeholder="Your Name" value={formData.name} onChange={e => setFormData({
+              ...formData,
+              name: e.target.value
+            })} className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent" required />
+              <input type="email" placeholder="Email Address" value={formData.email} onChange={e => setFormData({
+              ...formData,
+              email: e.target.value
+            })} className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent" required />
+              <input type="tel" placeholder="Phone Number" value={formData.phone} onChange={e => setFormData({
+              ...formData,
+              phone: e.target.value
+            })} className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent" required />
+              <textarea placeholder="Tell us about your project" rows={4} value={formData.project} onChange={e => setFormData({
+              ...formData,
+              project: e.target.value
+            })} className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent" required />
               
               <Button type="submit" size="lg" className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-semibold py-4 text-lg transition-all duration-300 hover:scale-105">
                 Submit
@@ -162,9 +151,7 @@ const CTA = () => {
               </Button>
             </form>
             
-            <p className="text-sm text-slate-500 text-center mt-4">
-              No obligations. No sales pressure. Just actionable insights to grow your business online.
-            </p>
+            <p className="text-sm text-slate-500 text-center mt-4">No obligations. No sales pressure. Just actionable insights to grow your business.</p>
           </div>
         </div>
       </div>
