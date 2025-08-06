@@ -159,7 +159,7 @@ const CTA = () => {
           {/* Right - CTA Form */}
           <div id="consultation-form" className="bg-white rounded-3xl p-8 shadow-2xl">
             <h4 className="text-2xl font-bold text-slate-900 mb-6 text-center">
-              Get Your FREE Business Consultation
+              Get In Touch With Our Team
             </h4>
             
             <form id="contactForm" className="space-y-4">
