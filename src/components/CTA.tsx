@@ -124,7 +124,7 @@ const CTA = () => {
           {/* Right - CTA Form */}
           <div id="consultation-form" className="bg-white rounded-3xl p-8 shadow-2xl">
             <h4 className="text-2xl font-bold text-slate-900 mb-6 text-center">
-              Get Your FREE Website Consultation
+              Get Your FREE Business Consultation
             </h4>
             
             <form onSubmit={handleSubmit} className="space-y-4">
