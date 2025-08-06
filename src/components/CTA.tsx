@@ -6,7 +6,7 @@ const CTA = () => {
   const { toast } = useToast();
 
   useEffect(() => {
-    const scriptURL = 'https://hook.eu2.make.com/bjn8a5p65ka7qsm9qi1fja8ajdeg7gzu';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyOtW8UPZ3VMYGszgyZ4-iqOEzANGOSbAMCF0_e9XMHOB8GOk6nai9SDEnalVx9GKyf/exec';
     
     const handleFormSubmit = (e: Event) => {
       e.preventDefault();
@@ -17,8 +17,7 @@ const CTA = () => {
       const submissionData = {
         ...data,
         timestamp: new Date().toISOString(),
-        source: "Business Consultation Form",
-        googleSheetsUrl: "https://script.google.com/macros/s/AKfycbyOtW8UPZ3VMYGszgyZ4-iqOEzANGOSbAMCF0_e9XMHOB8GOk6nai9SDEnalVx9GKyf/exec"
+        source: "Business Consultation Form"
       };
 
       fetch(scriptURL, {
