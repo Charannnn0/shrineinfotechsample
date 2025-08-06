@@ -16,8 +16,8 @@ const CTA = () => {
     e.preventDefault();
     
     try {
-      // Send to Zapier webhook
-      await fetch("https://hooks.zapier.com/hooks/catch/23020933/u4x25sv/", {
+      // Send to Make.com webhook
+      await fetch("https://hook.eu2.make.com/bjn8a5p65ka7qsm9qi1fja8ajdeg7gzu", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
