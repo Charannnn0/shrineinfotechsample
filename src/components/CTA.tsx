@@ -6,7 +6,7 @@ const CTA = () => {
   const { toast } = useToast();
 
   useEffect(() => {
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyOtW8UPZ3VMYGszgyZ4-iqOEzANGOSbAMCF0_e9XMHOB8GOk6nai9SDEnalVx9GKyf/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw04kaLRZtqZkOqQI9gsEDnxqQsp5l_LvCueM4lm52ci6-7mEoK_AE47SMl04ZLVTeM/exec';
     
     const handleFormSubmit = (e: Event) => {
       e.preventDefault();
